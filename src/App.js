@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Articles from "./components/Articles";
+import Paginationbar from "./components/Paginationbar";
 
 function App() {
   const theme = createTheme({
@@ -19,6 +20,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Nav />
         <Articles/>
+        <Paginationbar/>
       </ThemeProvider>
     </div>
   );

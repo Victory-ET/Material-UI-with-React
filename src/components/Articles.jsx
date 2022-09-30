@@ -9,6 +9,7 @@ const Articles = () => {
     ...theme.typography.body2,
     padding: theme.spacing(2),
     boxShadow: "none",
+    cursor: "pointer",
   }));
 
   return (
