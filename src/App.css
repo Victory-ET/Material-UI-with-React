@@ -1,3 +1,41 @@
-.App {
- 
+/* navigation styles */
+.navigation{
+    padding: 45px 0px 0 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.nav-left{
+    display: flex;
+    gap: .2em;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: 40px;
+}
+
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap: .3em;
+}
+
+.blog{
+    opacity: .8;
+    font-weight: bold;
+    font-size: 8px;
+    text-decoration: none;
+    color: #333;
+    padding-top: 1em;
+}
+
+.blog:hover{
+    cursor: pointer;
+}
+
+.git-btn{
+    margin-right: 40px;
 }
