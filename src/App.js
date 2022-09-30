@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Articles from "./components/Articles";
 import Paginationbar from "./components/Paginationbar";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
@@ -21,6 +22,7 @@ function App() {
         <Nav />
         <Articles/>
         <Paginationbar/>
+        <Footer/>
       </ThemeProvider>
     </div>
   );
