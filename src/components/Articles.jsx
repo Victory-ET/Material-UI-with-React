@@ -18,28 +18,28 @@ const Articles = () => {
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          sx={{ padding: "0 50px" }}
+          columns={{ xs: 4, sm: 8, md: 9 }}
+          sx={{ padding: "0 20px" }}
         >
           {Array.from(Array(8)).map((_, index) => (
             <Grid xs={12} sm={4} md={3} key={index}>
-              <Item style={{ width: "250px", marginBottom: "20px" }}>
+              <Item style={{ width: "350px", marginBottom: "20px" }}>
                 <img
                   src={logo}
                   alt="random"
                   style={{
                     width: "100%",
-                    height: "120px",
+                    height: "165px",
                     objectFit: "cover",
-                    borderRadius: "4px",
+                    borderRadius: "8px",
                   }}
                 />
                 <Typography
                   variant="h5"
                   sx={{
                     fontFamily: "Poppins, sans-serif",
-                    fontWeight: "600",
-                    fontSize: "15px",
+                    fontWeight: "640",
+                    fontSize: "20px",
                   }}
                   mt="1em"
                 >
@@ -50,7 +50,7 @@ const Articles = () => {
                   sx={{
                     fontFamily: "Poppins, sans-serif",
                     fontWeight: "400",
-                    fontSize: "10.65px",
+                    fontSize: "15px",
                   }}
                 >
                   Explore a quartet of fully available JS APIs for your code
@@ -58,7 +58,7 @@ const Articles = () => {
                 <Typography sx={{
                     fontFamily: "Poppins, sans-serif",
                     fontWeight: "300",
-                    fontSize: "8px",
+                    fontSize: "10px",
                 }} 
                 mt="1em"
                 >September 29, 2022, 5 min read</Typography>

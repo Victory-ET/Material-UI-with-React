@@ -5,7 +5,7 @@ const Paginationbar = () => {
   return (
     <div style={{margin: "40px 0px 60px 8px"}} >
       <Stack>
-      <Pagination count={10} shape="rounded" color="primary"  />
+      <Pagination count={10} shape="rounded"  />
       </Stack>
     </div>
   );

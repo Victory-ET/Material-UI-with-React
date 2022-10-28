@@ -5,22 +5,32 @@ import {
   Stack,
   TextField,
   Button,
+  InputAdornment,
 } from "@mui/material";
 import { Search, GitHub } from "@mui/icons-material/";
 
 const Nav = () => {
   // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
   const ArticleList = [
-    { title: "Learning Material UI" },
-    { title: "First React App" },
-    { title: "React Hooks" },
-    { title: "React Router" },
-    { title: "React Redux" },
-    { title: "Vue JS" },
-    { title: "Angular" },
-    { title: "Node JS" },
-    { title: "Express JS" },
-    { title: "Mongo DB & Mongoose" },
+    {
+      title: "Learning Material UI",
+      description: "A guide to learning Material UI",
+    },
+    {
+      title: "First React App",
+      description: "A guide to building your first React App",
+    },
+    { title: "React Hooks", description: "A guide to learning React Hooks" },
+    { title: "React Router", description: "A guide to learning React Router" },
+    { title: "React Redux", description: "A guide to learning React Redux" },
+    { title: "Vue JS", description: "A guide to learning Vue JS" },
+    { title: "Angular", description: "A guide to learning Angular" },
+    { title: "Node JS", description: "A guide to learning Node JS" },
+    { title: "Express JS", description: "A guide to learning Express JS" },
+    {
+      title: "Mongo DB & Mongoose",
+      description: "A guide to learning Mongo DB & Mongoose",
+    },
   ];
   return (
     // Navigation bar
@@ -79,48 +89,67 @@ const Nav = () => {
       {/* search fields */}
       <div>
         <Autocomplete
+          id="free-solo-demo"
           freeSolo
-          id="free-solo-2-demo"
-          sx={{ width: 300 }}
-          disableClearable
-          options={ArticleList.map((option) => option.title)}
+          options={ArticleList}
+          getOptionLabel={(option) => `${option.title}: ${option.description}`}
           renderInput={(params) => (
-            <>
-              <TextField
-                {...params}
-                label={
-                  <Stack
-                    direction="row"
-                    spacing={1}
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <Search sx={{ height: "20px", mr: 1, my: 0.5 }} />
-                    <Typography variant="body2" sx={{fontSize: "11px"}} >Search...</Typography>
-                  </Stack>
-                }
-                size="small"
-                helperText="Looking for an article? We got you covered!"
-                InputProps={{
-                  ...params.InputProps,
-                  type: "search",
-                }}
-              />
-            </>
+            <TextField
+              {...params}
+              placeholder="Search..."
+              size="small"
+              sx={{
+                backgroundColor: "#eee",
+                outline: "none",
+                border: "none",
+                width: "300px",
+              }}
+              InputProps={{
+                ...params.InputProps,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Search
+                      sx={{
+                        color: "#5a5e9a",
+                        width: ".7em",
+                        paddingLeft: "5px",
+                      }}
+                    />
+                  </InputAdornment>
+                ),
+              }}
+            />
           )}
         />
       </div>
       {/* repository button */}
-      <div className="git-btn" >
-        <Button variant="contained" size="medium"  >
+      <div className="git-btn">
+        <Button
+          variant="contained"
+          size="medium"
+          sx={{
+            background:
+              "linear-gradient(-60deg,#394EFF,#0095FF),linear-gradient(180deg,#394EFF,#0095FF)",
+            paddingX: "6px",
+            paddingY: "8px",
+          }}
+        >
           <Stack
             direction="row"
             spacing={1}
             justifyContent="center"
             alignItems="center"
           >
-            <GitHub sx={{height: "15px"}} />
-            <p style={{fontSize: "13px",  textTransform: "capitalize", fontWeight: "500"}} >Browse Repo</p>
+            <GitHub sx={{ height: "15px" }} />
+            <p
+              style={{
+                fontSize: "14px",
+                textTransform: "capitalize",
+                fontWeight: "540",
+              }}
+            >
+              Browse Repo
+            </p>
           </Stack>
         </Button>
       </div>
